@@ -405,7 +405,7 @@ Các định dạng hỗ trợ <span className="text-cyan-600">image/*, video/*,
               className="w-full h-10 bg-blue-500 cursor-pointer flex items-center justify-center text-white"
             >
               <FontAwesomeIcon icon={faImages} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              Chọn hình ảnh
+              Chọn file tải lên
             </label>
             <input
               id="file-upload"
