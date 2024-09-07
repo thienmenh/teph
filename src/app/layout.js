@@ -8,7 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "img.bibica.net",
+  title: "HOME",
   description: "Hệ thống lưu trữ ảnh",
 };
 
