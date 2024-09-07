@@ -215,11 +215,11 @@ export default function Home() {
   const handleCopy = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
-      // alert('已成功复制到剪贴板');
-      toast.success(`链接复制成功`);
+      // alert('Đã sao chép thành công vào clipboard');
+      toast.success(`Liên kết đã được sao chép thành công`);
     } catch (err) {
-      toast.error("链接复制失败")
-      // console.error('复制失败', err);
+      toast.error("Sao chép liên kết thất bại")
+      // console.error('Sao chép thất bại', err);
     }
   };
 
@@ -228,10 +228,10 @@ export default function Home() {
     const values = Array.from(codeElements).map(code => code.textContent);
     try {
       await navigator.clipboard.writeText(values.join("\n"));
-      toast.success(`链接复制成功`);
+      toast.success(`Liên kết đã được sao chép thành công`);
 
     } catch (error) {
-      toast.error(`链接复制失败\n${error}`)
+      toast.error(`Sao chép liên kết thất bại\n${error}`)
     }
   }
 
