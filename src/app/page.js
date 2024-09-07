@@ -335,7 +335,7 @@ export default function Home() {
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <div className="text-gray-800 text-lg">Ảnh hoặc video tải lên</div>
+            <div className="text-gray-800 text-lg">Hệ thống lưu trữ ảnh và file</div>
             <div className="mb-4 text-sm text-gray-500">
               Kích thước mỗi tệp tải lên tối đa <span className="text-cyan-600">50</span> MB (tối đa 20 file trong 1 phút)<br />
 Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> tệp<br />
