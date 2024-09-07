@@ -333,10 +333,6 @@ export default function Home() {
     <a href="/" className="text-lg font-semibold text-gray-800">Trang Chủ</a>
   </nav>
 </header>
-
- <nav className="flex justify-between items-center w-full max-w-4xl px-4"><a href="/"> HOME</a></nav>
-
-      </header>
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
         <div className="flex flex-row">
           <div className="flex flex-col">
