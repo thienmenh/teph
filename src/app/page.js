@@ -111,7 +111,7 @@ export default function Home() {
     const filesToUpload = file ? [file] : selectedFiles;
   
     if (filesToUpload.length === 0) {
-      toast.error('请选择要上传的文件');
+      toast.error('Vui lòng chọn các tệp cần tải lên');
       setUploading(false);
       return;
     }
@@ -140,19 +140,19 @@ export default function Home() {
             setSelectedFiles((prevFiles) => prevFiles.filter(f => f !== file));
             successCount++;
           } else {
-            toast.error(`上传 ${file.name} 图片时出错`);
+            toast.error(`Đã xảy ra lỗi khi tải lên hình ảnh ${file.name}`);
           }
         } catch (error) {
-          toast.error(`上传 ${file.name} 图片时出错`);
+          toast.error(`Đã xảy ra lỗi khi tải lên hình ảnh ${file.name}`);
         }
       }
   
       setUploadedFilesNum(uploadedFilesNum + successCount);
-      toast.success(`已成功上传 ${successCount} 张图片`);
+      toast.success(`Đã tải lên thành công ${successCount} hình ảnh`);
   
     } catch (error) {
-      console.error('上传过程中出现错误:', error);
-      toast.error('上传错误');
+      console.error('Đã xảy ra lỗi trong quá trình tải lên:', error);
+      toast.error('Lỗi tải lên');
     } finally {
       setUploading(false);
     }
