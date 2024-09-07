@@ -333,16 +333,15 @@ export default function Home() {
     <a href="/" className="text-lg font-semibold text-gray-800">Trang Chủ</a>
   </nav>
 </header>
-      <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
-        <div className="flex flex-row">
-          <div className="flex flex-col">
-            <div className="text-gray-800 text-lg">Ảnh hoặc video tải lên</div>
-            <div className="mb-4 text-sm text-gray-500">
-              Kích thước tệp tải lên tối đa <span className="text-cyan-600">100</span> MB - Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> bức ảnh - Các định dạng hỗ trợ <span className="text-cyan-600">image/*,video/*</span>
-            </div>
-          </div>
+<div className="flex flex-col mb-4">
+  <h1 className="text-2xl font-bold text-gray-800">Tải lên Ảnh hoặc Video</h1>
+  <p className="text-sm text-gray-600">
+    Kích thước tệp tải lên tối đa <span className="text-cyan-600">100 MB</span> - 
+    Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> bức ảnh - 
+    Hỗ trợ định dạng: <span className="text-cyan-600">image/*,video/*</span>
+  </p>
+</div>
 
-        </div>
         <div
           className="border-2 border-dashed border-slate-400 rounded-md relative"
           onDrop={handleDrop}
