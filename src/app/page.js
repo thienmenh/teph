@@ -336,7 +336,7 @@ export default function Home() {
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <div className="text-gray-800 text-lg">图片或视频上传</div>
+            <div className="text-gray-800 text-lg">Ảnh hoặc video tải lên</div>
             <div className="mb-4 text-sm text-gray-500">
               Kích thước tệp tải lên tối đa 100 MB; Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> bức ảnh
             </div>
@@ -389,7 +389,7 @@ export default function Home() {
             {selectedFiles.length === 0 && (
               <div className="absolute -z-10 left-0 top-0 w-full h-full flex items-center justify-center">
                 <div className="text-gray-500">
-                  拖拽文件到这里或将屏幕截图复制并粘贴到此处上传
+                  Kéo và thả tệp vào đây hoặc sao chép và dán ảnh chụp màn hình vào đây để tải lên
                 </div>
               </div>
             )}
@@ -403,7 +403,7 @@ export default function Home() {
               className="w-full h-10 bg-blue-500 cursor-pointer flex items-center justify-center text-white"
             >
               <FontAwesomeIcon icon={faImages} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              选择图片
+              Chọn hình ảnh
             </label>
             <input
               id="file-upload"
@@ -415,7 +415,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-5 col-span-8">
             <div className="w-full h-10 bg-slate-200 leading-10 px-4 text-center md:text-left">
-              已选择 {selectedFiles.length} 张，共 {getTotalSizeInMB(selectedFiles)} M;
+              Đã chọn {selectedFiles.length} bức ảnh, tổng cộng {getTotalSizeInMB(selectedFiles)} MB
             </div>
           </div>
           <div className="md:col-span-1 col-span-3">
@@ -424,7 +424,7 @@ export default function Home() {
               onClick={handleClear}
             >
               <FontAwesomeIcon icon={faTrashAlt} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              清除
+              Xóa
             </div>
           </div>
           <div className="md:col-span-1 col-span-5">
@@ -435,7 +435,7 @@ export default function Home() {
               onClick={() => handleUpload()}
             >
               <FontAwesomeIcon icon={faUpload} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              上传
+              Tải lên
             </div>
           </div>
         </div>
