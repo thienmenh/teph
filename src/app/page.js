@@ -337,7 +337,10 @@ export default function Home() {
           <div className="flex flex-col">
             <div className="text-gray-800 text-lg">Ảnh hoặc video tải lên</div>
             <div className="mb-4 text-sm text-gray-500">
-              Kích thước mỗi tệp tải lên tối đa <span className="text-cyan-600">50</span> MB (giới hạn 20 file trong 1 phút) - Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> tệp  - Các định dạng hỗ trợ <span className="text-cyan-600">image/*,video/*,.zip,.tar,.gz,.rar,.7z,.xz,.bz2</span>
+              Kích thước mỗi tệp tải lên tối đa <span className="text-cyan-600">50</span> MB (tối đa 20 file trong 1 phút)<br />
+Đã lưu trữ tổng cộng <span className="text-cyan-600">{Total}</span> tệp<br />
+Các định dạng hỗ trợ <span className="text-cyan-600">image/*, video/*, .zip, .tar, .gz, .rar, .7z, .xz, .bz2</span>
+
             </div>
           </div>
 
