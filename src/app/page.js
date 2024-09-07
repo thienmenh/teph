@@ -135,27 +135,28 @@ export default function Home() {
             const result = await response.json();
             file.url = result.url;
   
-  // Cập nhật uploadedImages và selectedFiles
-  setUploadedImages((prevImages) => [...prevImages, file]);
-  setSelectedFiles((prevFiles) => prevFiles.filter(f => f !== file));
-  successCount++;
-} else {
-  toast.error(`Đã xảy ra lỗi khi tải lên ảnh ${file.name}`);
-}
-} catch (error) {
-  toast.error(`Đã xảy ra lỗi khi tải lên ảnh ${file.name}`);
-}
-
-setUploadedFilesNum(uploadedFilesNum + successCount);
-toast.success(`Đã tải lên thành công ${successCount} ảnh`);
-
-} catch (error) {
-  console.error('Đã xảy ra lỗi trong quá trình tải lên:', error);
-  toast.error('Lỗi tải lên');
-} finally {
-  setUploading(false);
-}
-
+            // 更新 uploadedImages 和 selectedFiles
+            setUploadedImages((prevImages) => [...prevImages, file]);
+            setSelectedFiles((prevFiles) => prevFiles.filter(f => f !== file));
+            successCount++;
+          } else {
+            toast.error(`上传 ${file.name} 图片时出错`);
+          }
+        } catch (error) {
+          toast.error(`上传 ${file.name} 图片时出错`);
+        }
+      }
+  
+      setUploadedFilesNum(uploadedFilesNum + successCount);
+      toast.success(`已成功上传 ${successCount} 张图片`);
+  
+    } catch (error) {
+      console.error('上传过程中出现错误:', error);
+      toast.error('上传错误');
+    } finally {
+      setUploading(false);
+    }
+  };
       
 
   
@@ -211,29 +212,28 @@ toast.success(`Đã tải lên thành công ${successCount} ảnh`);
     setSelectedFiles(updatedFiles);
   };
 
-const handleCopy = async (text) => {
-  try {
-    await navigator.clipboard.writeText(text);
-    // alert('Đã sao chép thành công vào clipboard');
-    toast.success(`Liên kết đã được sao chép thành công`);
-  } catch (err) {
-    toast.error("Sao chép liên kết thất bại");
-    // console.error('Sao chép thất bại', err);
+  const handleCopy = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      // alert('已成功复制到剪贴板');
+      toast.success(`链接复制成功`);
+    } catch (err) {
+      toast.error("链接复制失败")
+      // console.error('复制失败', err);
+    }
+  };
+
+  const handleCopyCode = async () => {
+    const codeElements = parentRef.current.querySelectorAll('code');
+    const values = Array.from(codeElements).map(code => code.textContent);
+    try {
+      await navigator.clipboard.writeText(values.join("\n"));
+      toast.success(`链接复制成功`);
+
+    } catch (error) {
+      toast.error(`链接复制失败\n${error}`)
+    }
   }
-};
-
-
-const handleCopyCode = async () => {
-  const codeElements = parentRef.current.querySelectorAll('code');
-  const values = Array.from(codeElements).map(code => code.textContent);
-  try {
-    await navigator.clipboard.writeText(values.join("\n"));
-    toast.success(`Liên kết đã được sao chép thành công`);
-  } catch (error) {
-    toast.error(`Sao chép liên kết thất bại\n${error}`);
-  }
-}
-
 
   const handlerenderImageClick = (imageUrl) => {
     // console.log(imageUrl);
@@ -329,9 +329,9 @@ const handleCopyCode = async () => {
   return (
     <main className=" overflow-auto h-full flex w-full min-h-screen flex-col items-center justify-between">
       <header className="fixed top-0 h-[50px] left-0 w-full border-b bg-white flex z-50 justify-center items-center">
-        <nav className="flex justify-between items-center w-full max-w-4xl px-4">img.bibica.net</nav>
+        <nav className="flex justify-between items-center w-full max-w-4xl px-4">图床</nav>
 
-        
+        <Link href="/admin"><button className="px-4 py-2 mx-2 w-28  sm:w-28 md:w-20 lg:w-16 xl:w-16  2xl:w-20 bg-blue-500 text-white rounded ">管理</button></Link>
       </header>
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
         <div className="flex flex-row">
