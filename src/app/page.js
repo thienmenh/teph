@@ -409,6 +409,7 @@ export default function Home() {
               className="hidden"
               onChange={handleFileChange}
               multiple
+              accept="image/*,video/*"
             />
           </div>
           <div className="md:col-span-5 col-span-8">
