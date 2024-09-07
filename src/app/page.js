@@ -328,7 +328,12 @@ export default function Home() {
 
   return (
     <main className=" overflow-auto h-full flex w-full min-h-screen flex-col items-center justify-between">
-      <header className="fixed top-0 h-[50px] left-0 w-full border-b bg-white flex z-50 justify-center items-center">
+     <header className="fixed top-0 h-[60px] left-0 w-full border-b bg-white flex z-50 justify-center items-center shadow-md">
+  <nav className="flex justify-between items-center w-full max-w-4xl px-4">
+    <a href="/" className="text-lg font-semibold text-gray-800">Trang Chủ</a>
+  </nav>
+</header>
+
  <nav className="flex justify-between items-center w-full max-w-4xl px-4"><a href="/"> HOME</a></nav>
 
       </header>
