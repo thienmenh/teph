@@ -19,12 +19,12 @@ export function LoginPage() {
       // console.log(result);
       if (result?.error) {
         console.log(result.error);
-        toast.error("用户名或密码错误，请核对后在登陆！")
+        toast.error("Đăng nhập thành công và tự động chuyển đến trang quản lý！")
       } else {
         // 成功处理，比如重定向到一个受保护的页面
         // router.push("/admin")
         console.log('Login successful!');
-        toast.success('登录成功，自动跳转到管理页面!')
+        toast.success('Đăng nhập thành công và tự động chuyển đến trang quản lý!')
         // toast.error('Login successful!')
         setTimeout(() => {
           window.location.reload(); // 延迟3秒后刷新页面
