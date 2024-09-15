@@ -282,7 +282,7 @@ export default function Home() {
           <div ref={parentRef} className=" p-4 bg-slate-100  " onClick={handleCopyCode}>
             {uploadedImages.map((data, index) => (
               <div key={index} className="mb-2 ">
-                <code className=" w-2 break-all">{`<img src="${data.url}" alt="${data.name}" />`}</code>
+                <code className=" w-2 break-all">{`<img src="${data.url}" alt="${data.name}" width="435" height="580" />`}</code>
               </div>
             ))}
           </div >
